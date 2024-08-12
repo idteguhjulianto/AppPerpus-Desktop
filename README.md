@@ -5,6 +5,7 @@ Aplikasi Perpustakaan ini adalah sistem manajemen perpustakaan berbasis desktop 
 #### Teknologi :
 - [MySQL](https://downloads.mysql.com/archives/get/p/25/file/mysql-installer-community-8.0.28.0.msi) : 8.0.28
 - [JDK](https://www.oracle.com/id/java/technologies/javase/jdk11-archive-downloads.html) : 11
+
 Untuk menjalankan demo ini, Anda hanya memerlukan JDK 11, karena database diunggah secara online. Namun, harap diperhatikan bahwa koneksi database mungkin mengalami keterlambatan.
 
 #### Library atau Dependensi :
