@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="255" pageHeight="141" columnWidth="235" leftMargin="10" rightMargin="10" topMargin="20" bottomMargin="5" uuid="925d5954-8468-41f4-afdf-a72e2b1472e1">
+	<property name="ireport.zoom" value="4.1772481694156625"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM anggota where ID_Anggota = $P{id}]]>
+	</queryString>
+	<field name="ID_Anggota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama_Anggota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Telepon" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jenis_Kelamin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tanggal_Bergabung" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="13">
+			<frame>
+				<reportElement mode="Opaque" x="-12" y="-21" width="259" height="33" backcolor="#009999" uuid="26397840-962b-4751-a0bb-42e9fdf64caf"/>
+				<staticText>
+					<reportElement x="44" y="2" width="160" height="15" forecolor="#FFFFFF" uuid="c12398dc-364a-4d8d-90e9-72d2938f7927"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Kartu Anggota Perpustakaan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="44" y="17" width="160" height="12" forecolor="#FFFFFF" uuid="73e5cd25-9c1c-4b50-bc9e-1710b1df71f9"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="6" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Sekolah Uhnuy Tech Development]]></text>
+				</staticText>
+				<image>
+					<reportElement x="12" y="2" width="32" height="27" uuid="dbac035a-36d5-49a8-95f2-e9d139942620"/>
+					<imageExpression><![CDATA["../icon/LogoAppPerpus.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<detail>
+		<band height="103">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="147" y="3" width="88" height="10" uuid="84e76149-f6a3-45c8-835d-e2bb9f399112"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ID_Anggota}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="147" y="13" width="88" height="10" uuid="8eccb0a4-1f1b-491b-8ad3-20dc64217fad"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nama_Anggota}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="147" y="23" width="88" height="10" uuid="4404038a-f1ef-4950-8d07-657f5f433d2f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="147" y="33" width="88" height="10" uuid="fce036a0-fd41-4902-ab19-7022335a67a5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Jenis_Kelamin}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="147" y="43" width="88" height="10" uuid="753f42c7-3040-4619-81a1-f72efb722705"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd").format($F{Tanggal_Bergabung})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="76" y="3" width="59" height="10" forecolor="#009999" backcolor="#E6E6E6" uuid="efd0dbe1-94a5-42f7-a515-daae115a79d3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Anggota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="76" y="13" width="59" height="10" forecolor="#009999" backcolor="#E6E6E6" uuid="1104bd89-428c-42e0-be73-851ca30d02a1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="76" y="23" width="59" height="10" forecolor="#009999" backcolor="#E6E6E6" uuid="1dc278da-aa4b-4b56-8763-d9a16dfaf001"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="76" y="33" width="59" height="10" forecolor="#009999" backcolor="#E6E6E6" uuid="38ff6342-869f-419f-bdfb-31feac1c15dc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="76" y="43" width="59" height="10" forecolor="#009999" backcolor="#E6E6E6" uuid="087f8f06-6d36-4c4d-aa3a-0fe5c99a7d93"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Bergabung]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="3" width="12" height="10" uuid="64ad2f49-4ad9-4ded-834b-57c910ec906a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="13" width="12" height="10" uuid="b5eef728-9a11-4157-aa2f-780b1e5438ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="23" width="12" height="10" uuid="617687f0-9aa2-4f0f-a6a2-a4f2f1930bcc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="33" width="12" height="10" uuid="e2ff1dde-1581-481e-9702-ac56e322d4d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="43" width="12" height="10" uuid="8b239282-2cdc-4793-a13e-ea26c99b99eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="21" y="3" width="40" height="60" uuid="26f6c585-9806-46bd-882b-50aaa69ef2d0"/>
+				<graphicElement>
+					<pen lineWidth="0.2"/>
+				</graphicElement>
+			</rectangle>
+			<componentElement>
+				<reportElement x="4" y="76" width="76" height="26" uuid="b003af6d-1a05-4340-a570-b5440380e420"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false" barHeight="80">
+					<jr:codeExpression><![CDATA[$F{ID_Anggota}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement x="172" y="56" width="18" height="10" uuid="b35cf938-ee4a-43e7-83ad-139256bd6d88"/>
+				<textElement verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[Tegal, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="93" width="63" height="10" uuid="3525e5ad-b92f-49bb-b5cc-8a283fda182e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[CEO Uhnuy Tech Development]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="56" width="45" height="10" uuid="683b3896-077a-476e-8965-2e90f9789447"/>
+				<textElement verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("d MMMM yyyy", new java.util.Locale("id")).format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="172" y="66" width="63" height="10" uuid="b456c3aa-eae6-4df2-b7f7-2af075dceb9d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[Teguh Julianto]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
